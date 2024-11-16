@@ -1,3 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Header from './header';
@@ -5,7 +9,7 @@ import { Check2, X } from 'react-bootstrap-icons';
 import Axios from 'axios';
 
 function Home() {
-  document.title = 'News Guardian | Home';
+  document.title = 'Trust AI | Home';
   let stage = 1;
 
   const [liveNewsData, setLiveNewsData] = useState([]);

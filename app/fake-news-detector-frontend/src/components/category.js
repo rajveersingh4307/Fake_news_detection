@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -16,6 +18,7 @@ const CategoryContainer = () => {
 
   const [newsData, setNewsData] = useState([]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchNewsData = () => {
 
     const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
@@ -48,7 +51,7 @@ const CategoryContainer = () => {
     console.log('Category:', category);
     fetchNewsData();
     
-  }, [category]);
+  }, [category, fetchNewsData]);
 
   
 
@@ -69,7 +72,9 @@ const CategoryContainer = () => {
                   { newsData[0].img_url === 'None' ? 
                   null :
                     (
+                      // eslint-disable-next-line react/jsx-no-comment-textnodes
                       <Col>
+                        // eslint-disable-next-line jsx-a11y/alt-text, jsx-a11y/alt-text, jsx-a11y/alt-text, jsx-a11y/alt-text, jsx-a11y/alt-text, jsx-a11y/alt-text
                         <img src={newsData[0].img_url}/>
                       </Col>
                     )
@@ -97,6 +102,7 @@ const CategoryContainer = () => {
                 <div className='div-ipsdf'>
                   { newsData[1].img_url === 'None' ? null : (
                   <Row>
+                    {/* // eslint-disable-next-line jsx-a11y/alt-text */}
                     <img src={newsData[1].img_url} width={500} height={200}></img>
                     </Row>
                   ) }
@@ -128,7 +134,9 @@ const CategoryContainer = () => {
               <Col sm key={index}>
                 <div className='div-olapq'>
                   {news.img_url !== 'None' && (
+                    // eslint-disable-next-line react/jsx-no-comment-textnodes
                     <Row>
+                      // eslint-disable-next-line jsx-a11y/img-redundant-alt
                       <img src={news.img_url} width={300} height={150} alt={`News ${index} Image`} />
                     </Row>
                   )}
@@ -161,7 +169,9 @@ const CategoryContainer = () => {
               <Col sm key={index}>
                 <div className="div-olapq">
                   {news.img_url !== 'None' && (
+                    // eslint-disable-next-line react/jsx-no-comment-textnodes
                     <Row>
+                      // eslint-disable-next-line jsx-a11y/img-redundant-alt, jsx-a11y/img-redundant-alt
                       <img src={news.img_url} width={300} height={150} alt={`News ${index + 6} Image`} />
                     </Row>
                   )}

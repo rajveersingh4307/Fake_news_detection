@@ -5,7 +5,7 @@ import { Container, Button } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 
 function NewsQuiz() {
-  document.title = 'News Guardian | News Quiz';
+  document.title = 'Trust AI | News Quiz';
   let stage = 3;
 
   const quizData = {
